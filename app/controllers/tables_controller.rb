@@ -12,7 +12,7 @@ class TablesController < ApplicationController
   end
 
   def index
-    @tables = Table.all
+    @tables = Table.all.page(params[:page])
   end
 
   def new
