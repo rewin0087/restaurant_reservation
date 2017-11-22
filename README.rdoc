@@ -2,7 +2,7 @@
 
 	# Install git
 	# Install ruby 2.3.0 through rvm or rbenv
-	# Install rails gem version 4.2.2
+	# Install rails gem version 4.2.5.1
 	# Install bundler gem
 	# Install mysql
 
