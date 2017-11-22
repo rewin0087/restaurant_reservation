@@ -6,10 +6,25 @@
   	# Install bundler gem
   	# Install mysql
 
-You can follow guide here for specific OS
+##### You can follow guide here for specific OS
 
   	http://installrails.com/
+  	
+##### Copy config template files
 
+Database config and replace corresponding values on the current setup:
+	
+	config/database.yml.template -> config/database.yml
+
+##### Rails secrets config
+
+Rails secrets config and generate new secrets and replace the secret_key_base value:
+	
+	config/secrets.yml.template -> config/secrets.yml
+	
+	Run:
+		bundle exec rake secret
+	and copy value and replace secret_key_base value
 # Run
 
 Once done installing requirements run the following
