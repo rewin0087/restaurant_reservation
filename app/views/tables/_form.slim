@@ -1,0 +1,5 @@
+= simple_form_for @table do |f|
+  = f.input :name
+  = f.input :chairs, collection: 2..8
+  = f.button :submit, data: { disable_with: 'Processing...' }
+  = link_to 'Back', :back, class: 'button float-right'

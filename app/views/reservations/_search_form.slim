@@ -1,0 +1,6 @@
+= simple_form_for @reservation, method: :get, remote: true, url: search_vacant_for_reservation_tables_path(format: :js), html: { id: 'search_availables_for_reservation', novalidate: false } do |f|
+  = f.input :seats, collection: 2..8, label: 'Seats', required: true
+  = f.input :date_time, as: :string, label: 'Reservation  Date Time', required: true
+  = f.button :submit, value: 'Search Vacant Table', data: { disable_with: 'Searching...' }
+  = link_to 'Go to active reservations', home_path, class: 'button float-right'
+

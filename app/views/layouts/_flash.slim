@@ -1,0 +1,5 @@
+- flash.delete(:timedout).each do |k, v|
+  .grid-container
+    .callout.large-12.cell class="#{k == 'notice' ? 'primary' : 'alert'}"
+      p
+        = v

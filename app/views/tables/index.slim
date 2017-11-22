@@ -1,0 +1,13 @@
+.grid-container
+  .large-12.cell
+    = link_to 'New Table', new_table_path,  class: 'button'
+  .large-12.cell
+    table.hover.unstriped
+      thead
+        tr
+          th ID
+          th Name
+          th Chairs
+          th width='100px'
+      tbody
+        = render @tables

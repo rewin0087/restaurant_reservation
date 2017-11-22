@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chairs: 1
+  date_time: 2017-11-17 14:46:18
+  status: 1
+
+two:
+  chairs: 1
+  date_time: 2017-11-17 14:46:18
+  status: 1

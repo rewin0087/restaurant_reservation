@@ -1,0 +1,10 @@
+.grid-container
+  .large-12.cell
+    h3 Search vacant table for reservation
+  .large-12.cell.clearfix
+    = render 'search_form'
+.grid-container.grid-x
+  .large-12.cell
+    h3 Vacant tables for reservation (#{current_hour})
+  .large-12.cell.available_tables
+    = render 'tables/available_tables'

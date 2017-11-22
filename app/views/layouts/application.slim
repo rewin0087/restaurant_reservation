@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta name='viewport' content='initial-scale=1.0, width=device-width'
+    title
+      = content_for?(:title) ? yield(:title) : "Restaurant Reservation"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true, 'data-turbolinks-eval' => false
+    = csrf_meta_tags
+  body
+    .header
+      = render 'layouts/header'
+    .main-content
+      = render 'layouts/flash'
+      = yield
+    .footer
+      = render 'layouts/footer'

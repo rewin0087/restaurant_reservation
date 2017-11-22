@@ -1,0 +1,24 @@
+table.hover.unstriped
+  thead
+    tr
+      th ID
+      th Name
+      th Time
+      th Seats
+      th Table
+      th
+  tbody
+    - @reservations.each do |r|
+      tr
+        td
+          = r.id
+        td
+          = r.name
+        td
+          = display_readable_date_time(r.date_time)
+        td
+          = r.seats
+        td
+          = r.table.name
+        td
+          = link_to 'View', reservation_path(r), class: 'button'

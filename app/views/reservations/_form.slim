@@ -1,0 +1,10 @@
+= simple_form_for @reservation do |f|
+  = f.input :name
+  = f.input :seats, collection: 2..8
+  = f.input :date_time, as: :string, input_html: { value: f.object.formatted_date_time }
+  = f.input :status, collection: Reservation.statuses.keys, selected: f.object.status
+  = f.input :table_id, collection: @tables.map{|t| [t.name, t.id]}
+  = f.input :remarks, as: :text
+  = f.button :submit, data: { disable_with: 'Processing...' }
+  = link_to 'Back', :back, class: 'button float-right'
+

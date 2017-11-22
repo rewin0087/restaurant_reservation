@@ -1,0 +1,18 @@
+table.hover.unstriped
+  thead
+    tr
+      th ID
+      th Name
+      th Chairs
+      th width='100'
+  tbody
+    - @tables.each do |t|
+      tr
+        td
+          = t.id
+        td
+          = t.name
+        td
+          = t.chairs
+        td
+          = button_to 'Reserve Table', reservations_path(reservation: { seats: @seats, date_time: @date_time, table_id: t.id}), method: :post, class: 'button', data: { disable_with: 'Reserving...' }

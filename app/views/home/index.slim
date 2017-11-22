@@ -1,0 +1,7 @@
+.grid-container
+  .large-12.cell
+    h3.float-left Active Reservations
+    = link_to 'Reserve a table', reservations_path, class: 'button float-right'
+.grid-container
+  .large-12
+    = render 'reserved_tables'
