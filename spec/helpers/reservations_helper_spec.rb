@@ -10,6 +10,6 @@ RSpec.describe ReservationsHelper, :type => :helper do
   end
 
   describe '#display_readable_date_time' do
-    it { expect(helper.display_readable_date_time('2017-11-23 01:00'.to_time)).to eql('Nov 23, 2017 01:00') }
+    it { expect(helper.display_readable_date_time('2017-11-23 01:00'.to_time)).to eql('Nov 23, 2017 01:00 AM') }
   end
 end

@@ -7,6 +7,6 @@ module ReservationsHelper
   end
 
   def display_readable_date_time(date_time)
-    date_time.strftime("%b %d, %Y %H:%M")
+    date_time.strftime("%b %d, %Y %I:%M %p")
   end
 end
