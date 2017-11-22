@@ -3,7 +3,7 @@ class ReservationsController < ApplicationController
 
   def index
     @reservation = Reservation.new
-    @date_time = Time.now.strftime('%Y-%m-%d %H:%M')
+    @date_time = (Time.now + 1.hour).beginning_of_hour.strftime('%Y-%m-%d %H:%M')
     @seats = 0
     @tables = Table.find_vacants(@date_time, @seats)
   end
@@ -23,6 +23,8 @@ class ReservationsController < ApplicationController
   end
 
   def edit
+
+    @reservation.seats = @reservation.table.chairs if @reservation.seats < 1
     @tables = available_tables
   end
 
@@ -30,7 +32,7 @@ class ReservationsController < ApplicationController
     @reservation.assign_attributes(reservation_params)
 
     if @reservation.valid? && @reservation.save
-      redirect_to reservations_path, notice: "Reservation for #{@reservation.table.name} got updated."
+      redirect_to home_path, notice: "Reservation for #{@reservation.table.name} got updated."
     else
       flash.now[:error] = 'Failed to update reservation. Please check errors below.'
       @tables = available_tables

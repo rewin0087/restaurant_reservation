@@ -13,15 +13,19 @@
   .grid-x
     .small-3 Date Time
     .small-9
-      = @reservation.formatted_date_time
+      = display_readable_date_time @reservation.date_time
   .grid-x
     .small-3 Status
     .small-9
-      = @reservation.status  
+      = @reservation.status
   .grid-x
     .small-3 Table
     .small-9
       = @reservation.table.name
+  .grid-x
+    .small-3 Table Chairs
+    .small-9
+      = @reservation.table.chairs
   .grid-x
     .small-3 Remarks
     .small-9

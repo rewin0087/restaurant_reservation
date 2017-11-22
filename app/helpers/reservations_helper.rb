@@ -1,8 +1,8 @@
 module ReservationsHelper
   def current_hour
     date_time = @date_time.to_time
-    start_time = date_time.strftime('%H:%M %p')
-    end_time = (date_time + 1.hour).strftime('%H:%M %p')
+    start_time = date_time.strftime('%I:%M %p')
+    end_time = (date_time + 1.hour).strftime('%I:%M %p')
     "#{start_time} - #{end_time}"
   end
 

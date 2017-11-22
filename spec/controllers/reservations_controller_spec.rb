@@ -8,9 +8,9 @@ RSpec.describe ReservationsController, :type => :controller do
     let!(:table_b) { create(:table, chairs: 6, name: 'Table B') }
     before { get :index }
 
-    it { expect(assigns(:tables).length).to eql(1) }
+    it { expect(assigns(:tables).length).to eql(2) }
     it { expect(assigns(:reservation).id).to be_nil }
-    it { expect(assigns(:date_time)).to eql(Time.now.strftime('%Y-%m-%d %H:%M')) }
+    it { expect(assigns(:date_time)).to eql((Time.now + 1.hour).beginning_of_hour.strftime('%Y-%m-%d %H:%M')) }
     it { expect(response).to have_http_status(200) }
     it { expect(response).to render_template('reservations/index') }
   end
@@ -48,6 +48,7 @@ RSpec.describe ReservationsController, :type => :controller do
     it { expect(assigns(:reservation).name).to eql('Reservation A') }
     it { expect(assigns(:reservation).status).to eql('occupied') }
     it { expect(assigns(:reservation).formatted_date_time).to eql(Time.now.strftime('%Y-%m-%d %H:%M')) }
+    it { expect(response).to redirect_to home_path }
   end
 
   describe 'DELETE destroy' do
