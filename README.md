@@ -16,7 +16,6 @@ Database config and replace corresponding values on the current setup:
 	
 	config/database.yml.template -> config/database.yml
 
-##### Rails secrets config
 
 Rails secrets config and generate new secrets and replace the secret_key_base value:
 	
