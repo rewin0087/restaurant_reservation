@@ -106,6 +106,7 @@ GEM
     mysql2 (0.3.21)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    pg (0.21.0)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -223,6 +224,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mysql2 (~> 0.3.13)
+  pg (~> 0.18)
   rails (= 4.2.5.1)
   rake (< 11.0)
   rspec (~> 3.1.0)
