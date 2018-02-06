@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rake', '< 11.0'
 gem 'rails', '4.2.5.1'
-gem 'mysql2', '~> 0.3.13'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -11,6 +10,7 @@ gem 'kaminari'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'foundation-datepicker-rails'
+gem 'pg', '~> 0.18'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
@@ -21,6 +21,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'mysql2', '~> 0.3.13'
   gem 'byebug'
   gem 'spring'
   gem 'factory_bot_rails'
