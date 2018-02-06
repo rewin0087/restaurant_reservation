@@ -29,7 +29,4 @@ production:
   encoding: unicode
   encoding: utf8
   pool: 5
-  host: localhost
-  username: postgres
-  password: postgres
   database: restaurant_reservation_production
